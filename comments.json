@@ -1,0 +1,38 @@
+{
+    "masterdark-ihu-18-20240502-01_EXPTIME45.0_CCDTEMP-25.0.jpg": [
+        {
+            "comment": "test",
+            "timestamp": "2024-05-15 14:00:43"
+        },
+        {
+            "comment": "test scomment on image",
+            "timestamp": "2024-05-15 14:23:01"
+        },
+        {
+            "comment": "hello",
+            "timestamp": "2024-05-15 16:26:18"
+        }
+    ],
+    "plot2.html": [
+        {
+            "comment": "test comment on plot",
+            "timestamp": "2024-05-15 14:25:28"
+        }
+    ],
+    "masterdark-ihu-11-20240502-01_EXPTIME45.0_CCDTEMP-25.0.jpg": [
+        {
+            "comment": "does this work",
+            "timestamp": "2024-05-15 16:10:37"
+        }
+    ],
+    "plot1.html": [
+        {
+            "comment": "please god tell me this works",
+            "timestamp": "2024-05-15 16:53:51"
+        },
+        {
+            "comment": "please god tell me this works",
+            "timestamp": "2024-05-15 16:53:54"
+        }
+    ]
+}

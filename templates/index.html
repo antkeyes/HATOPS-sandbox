@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Gallery</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1 class="page-title">HATPI Folders</h1>
+    <div class="container">
+        <div class="file-list">
+            {% for folder, creation_date in folders %}
+                <div class="file-item">
+                    <div class="file-name">
+                        <a href="{{ folder }}/">{{ folder }}</a>
+                    </div>
+                    <div class="file-date">{{ creation_date }}</div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Comments title -->
+    <h2 class="comments-title">Comments</h2>
+    <div class="comments-container">
+        {% for filename, file_comments in comments.items() %}
+            {% for comment in file_comments %}
+                <div class="comment-item">
+                    <div class="comment-header">
+                        <span class="comment-filename">{{ filename }}</span>
+                        <span class="comment-timestamp">{{ comment.timestamp }}</span>
+                    </div>
+                    <div class="comment-body">
+                        <p>{{ comment.comment }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endfor %}
+    </div>
+</body>
+</html>
