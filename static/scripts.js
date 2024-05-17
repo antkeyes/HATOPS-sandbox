@@ -65,25 +65,34 @@ function openGallery(filePath) {
 
     const closeButton = document.createElement('button');
     closeButton.innerText = 'X';
+    closeButton.className = "closeButton";
     closeButton.style.cssText = 'position: absolute; top: 20px; right: 20px; font-size: 24px; color: white; cursor: pointer;';
     closeButton.onclick = () => document.body.removeChild(overlay);
 
+    const commentContainer = document.createElement('div');
+    commentContainer.className = 'comment-container';
+
     const commentBox = document.createElement('textarea');
+    commentBox.className = "commentBox";
     commentBox.placeholder = 'Add a comment...';
     commentBox.style.cssText = 'width: 90%; height: 50px; margin-top: 20px;';
 
     const submitButton = document.createElement('button');
     submitButton.innerText = 'Submit';
-    submitButton.style.cssText = 'margin-top: 10px;';
+    submitButton.className = 'submit-button';
     submitButton.onclick = () => submitComment(fileName, commentBox.value);
 
+    // Append the comment box and submit button to the container
+    commentContainer.appendChild(commentBox);
+    commentContainer.appendChild(submitButton);
+
+    // Append elements to the overlay
     overlay.appendChild(title);
     overlay.appendChild(leftArrow);
     overlay.appendChild(content);
     overlay.appendChild(rightArrow);
     overlay.appendChild(closeButton);
-    overlay.appendChild(commentBox);
-    overlay.appendChild(submitButton);
+    overlay.appendChild(commentContainer);
 }
 
 function submitComment(fileName, comment) {

@@ -115,6 +115,10 @@ a:hover {
 
 .comment-body {
     margin-top: 5px;
+    margin-left: 10px;
+    padding-left: 5px;
+    border-left: 2px solid #CCCCCC; /* Bar on the left */
+    font-style: italic;
 }
 
 /* Unique pill container and button styling */
@@ -126,7 +130,7 @@ a:hover {
 }
 
 .pill-button-unique {
-    background-color: #e8f4fc;
+    background-color: #d6e5f5;
     border: none;
     color: black;
     padding: 10px 20px;
@@ -139,11 +143,11 @@ a:hover {
 }
 
 .pill-button-unique:hover {
-    background-color: #d0e8f8;
+    background-color: #eaf2fa;
 }
 
 .pill-button-unique.active {
-    background-color: #c0d8f0;
+    background-color: #accbeb;
     font-weight: bold; /* Make text bold for active pill */
 }
 
@@ -171,8 +175,9 @@ a:hover {
 }
 
 #galleryOverlay img {
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 80% !important; /* Ensuring override */
+    max-height: 80% !important; /* Ensuring override */
+    margin-bottom: 20px;
     width: auto;
     height: auto;
     border: 2px solid white;
@@ -181,10 +186,11 @@ a:hover {
 }
 
 #galleryOverlay .overlay-iframe {
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 80%;
+    max-height: 80%;
     width: 90%;
     height: 90%;
+    margin-bottom: 20px;;
     border: 2px solid white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     background-color: white;
@@ -245,5 +251,55 @@ a:hover {
     font-weight: bold;
 }
 
+a.back-to-home {
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 1.2em;
+    color: #3498db;
+    text-decoration: none; /* Ensure the text is not underlined */
+}
 
+a.back-to-home:hover {
+    color: #2980b9;
+}
 
+/* Comment container styles */
+.comment-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 72%; /* Adjust as needed */
+    max-width: 900px; /* Ensure it never gets wider than 500px */
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    position: relative;
+}
+
+/* Comment box styles */
+.commentBox {
+    width: 100%;
+    height: 50px;
+    border: 1px solid darkgrey;
+    margin-bottom: 10px; /* Add space between the comment box and the button */
+}
+
+/* Submit button styles */
+.submit-button {
+    margin-top: 30px; /* Any additional styling you want */
+    align-self: center !important; /* Align the button to the end if needed */
+    font-size: 1em !important; /* Adjust font size as needed */
+    color: #333333 !important; 
+    background-color: #d6e5f5 !important;
+    border-radius: 50px;
+    padding: 10px 10px;
+}
+
+.submit-button:hover {
+    background-color: #eaf2fa !important;
+}
